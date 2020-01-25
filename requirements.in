@@ -1,0 +1,7 @@
+icalendar
+bs4
+requests
+lxml
+dateparser
+pytz
+
