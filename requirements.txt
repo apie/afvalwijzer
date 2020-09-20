@@ -4,16 +4,16 @@
 #
 #    pip-compile
 #
-certifi==2019.11.28       # via requests
+certifi==2020.6.20        # via requests
 chardet==3.0.4            # via requests
-dateparser==0.7.2
-icalendar==4.0.4
-idna==2.8                 # via requests
-lxml==4.4.2
+dateparser==0.7.6         # via -r requirements.in
+icalendar==4.0.7          # via -r requirements.in
+idna==2.10                # via requests
+lxml==4.5.2               # via -r requirements.in
 python-dateutil==2.8.1    # via dateparser, icalendar
-pytz==2019.3
-regex==2020.1.8           # via dateparser
-requests==2.22.0
-six==1.14.0               # via python-dateutil
-tzlocal==2.0.0            # via dateparser
-urllib3==1.25.8           # via requests
+pytz==2020.1              # via -r requirements.in, dateparser, icalendar, tzlocal
+regex==2020.7.14          # via dateparser
+requests==2.24.0          # via -r requirements.in
+six==1.15.0               # via python-dateutil
+tzlocal==2.1              # via dateparser
+urllib3==1.25.10          # via requests
