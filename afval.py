@@ -12,13 +12,14 @@ from sys import argv
 import pytz
 import dateparser
 
-from settings import postcode, huisnummer
+from settings import postcode, huisnummer, apikey
 
 timezone = 'Europe/Amsterdam'
 
 
 def lees_json():
-    response = requests.get(f'https://json.mijnafvalwijzer.nl/?method=postcodecheck&postcode={postcode}&huisnummer={huisnummer}')
+    url=f'https://api.mijnafvalwijzer.nl/webservices/appsinput/?apikey={apikey}&method=postcodecheck&postcode={postcode}&street=&huisnummer={huisnummer}&toevoeging=&platform=phone&langs=nl&mobiletype=android&version=58&app_name=afvalwijzer'
+    response = requests.get(url)
     response.raise_for_status()
     pickupdates = response.json()['data']['ophaaldagen']['data']
     return map(lambda d: (dateparser.parse(d['date'], settings={'TIMEZONE': timezone, 'RETURN_AS_TIMEZONE_AWARE': True}), d['type']), pickupdates)
