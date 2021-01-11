@@ -9,7 +9,7 @@ chardet==3.0.4            # via requests
 dateparser==0.7.6         # via -r requirements.in
 icalendar==4.0.7          # via -r requirements.in
 idna==2.10                # via requests
-lxml==4.5.2               # via -r requirements.in
+lxml==4.6.2               # via -r requirements.in
 python-dateutil==2.8.1    # via dateparser, icalendar
 pytz==2020.1              # via -r requirements.in, dateparser, icalendar, tzlocal
 regex==2020.7.14          # via dateparser
