@@ -8,6 +8,8 @@ Generate ICAL for the waste collection days listed on [https://www.mijnafvalwijz
 ```
 postcode=<your postcode>
 huisnummer=<your house number>
+apikey=<get it from the website>
+ignore=<tuple of waste types to ignore>
 ```
 2. Run `python3 afval.py`
 3. The script generates a file `afvalkalender.ics`. Use it in your calendar application.

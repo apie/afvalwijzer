@@ -12,7 +12,7 @@ from sys import argv
 import pytz
 import dateparser
 
-from settings import postcode, huisnummer, apikey
+from settings import postcode, huisnummer, apikey, ignore
 
 timezone = "Europe/Amsterdam"
 
@@ -22,15 +22,16 @@ def lees_json():
     response = requests.get(url)
     response.raise_for_status()
     pickupdates = response.json()["data"]["ophaaldagen"]["data"]
-    return map(
-        lambda d: (
+    return (
+        (
             dateparser.parse(
                 d["date"],
                 settings={"TIMEZONE": timezone, "RETURN_AS_TIMEZONE_AWARE": True},
             ),
             d["type"],
-        ),
-        pickupdates,
+        )
+        for d in pickupdates
+        if d["type"] not in ignore
     )
 
 
