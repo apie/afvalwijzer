@@ -1,5 +1,5 @@
 # Afvalwijzer
-Generate ICAL for the waste collection days listed on [https://www.mijnafvalwijzer.nl/]()
+Generate ICAL for the waste collection days listed on https://www.mijnafvalwijzer.nl/
 
 
 ###### Getting started:
