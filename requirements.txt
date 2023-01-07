@@ -6,40 +6,41 @@
 #
 backports-zoneinfo==0.2.1
     # via
+    #   icalendar
     #   pytz-deprecation-shim
     #   tzlocal
-certifi==2021.10.8
+certifi==2022.12.7
     # via requests
-charset-normalizer==2.0.9
+charset-normalizer==2.1.1
     # via requests
-dateparser==1.1.0
+dateparser==1.1.5
     # via -r requirements.in
-icalendar==4.0.9
+icalendar==5.0.4
     # via -r requirements.in
-idna==3.3
+idna==3.4
     # via requests
-lxml==4.9.1
+lxml==4.9.2
     # via -r requirements.in
 python-dateutil==2.8.2
     # via
     #   dateparser
     #   icalendar
-pytz==2021.3
+pytz==2022.7
     # via
     #   -r requirements.in
     #   dateparser
     #   icalendar
 pytz-deprecation-shim==0.1.0.post0
     # via tzlocal
-regex==2021.11.10
+regex==2022.10.31
     # via dateparser
-requests==2.26.0
+requests==2.28.1
     # via -r requirements.in
 six==1.16.0
     # via python-dateutil
-tzdata==2021.5
+tzdata==2022.7
     # via pytz-deprecation-shim
-tzlocal==4.1
+tzlocal==4.2
     # via dateparser
-urllib3==1.26.7
+urllib3==1.26.13
     # via requests
